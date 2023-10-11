@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Resources for DSAN Students<br>Prof. Jeff <span class='subtitle'><a href='mailto:jj1088@georgetown.edu'><i class='bi bi-envelope-at ps-1'></i></a></span>"
