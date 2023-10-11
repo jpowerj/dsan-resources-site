@@ -1,0 +1,18 @@
+---
+title: "Resources for DSAN Students"
+listing:
+  sort-ui: false
+  filter-ui: false
+  type: table
+  #include:
+  #  categories: "{Class Sessions}"
+  fields: [title,date]
+  sort: "lecnum asc"
+  table-hover: true
+  date-format: full
+  categories: true
+---
+
+Use the menu on the left, or the table below, to browse the resources! You can use the listing of **Categories** on the right side of this page to filter the resources based on category.
+
+
