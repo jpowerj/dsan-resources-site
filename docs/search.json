@@ -7,6 +7,13 @@
     "text": "You can use a Mac App called Mountain Duck to mount your GU Domains space as a disk on your local computer, so that you can upload/download/view/modify files on your GU Domains space the same way you work with files on your local computer.\nOn my Mac, for example, I have my GU Domains server space mounted so that my Finder sidebar looks as follows:\n\n\n\n\n\nSo that when I open this Georgetown Domains “drive”, I see the following:"
   },
   {
+    "objectID": "rprofile-globals.html",
+    "href": "rprofile-globals.html",
+    "title": "Establishing Global Settings for R in VSCode",
+    "section": "",
+    "text": "Awesome student Kangheng Liu figured out the following, which will be helpful for students who use the dark (default!) theme for VSCode but find that their R plots show up as black labels on a black background, so that they are not readable:\nThe IRkernel actually calls the R default startup process. The .Rprofile works whether inside or outside of jupyter.\nThe problem was R’s logic in sourcing the .Rprofile file. It won’t load libraries/packages in starting R kernel process. To pass background color as white, we need to write a hook for that. Search for hook in the link for explanations.\nThe coding is as below. in .Rprofile at home folder (or project folder, will take presendence if any):\nsetHook(packageEvent(\"grDevices\", \"onLoad\"),\n        function(...) grDevices::pdf.options(bg=\"white\"))\nThis will pass bg=\"white\" to grDevices, which is the R graphics device package.\nThank you Kangheng, on behalf of the DSAN students, for discovering this!"
+  },
+  {
     "objectID": "images-in-qmd.html",
     "href": "images-in-qmd.html",
     "title": "Including Images in .qmd Files",
@@ -32,6 +39,6 @@
     "href": "index.html",
     "title": "Resources for DSAN Students",
     "section": "",
-    "text": "Use the menu on the left, or the table below, to browse the resources! You can use the listing of Categories on the right side of this page to filter the resources based on category.\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nIncluding Images in .qmd Files\n\n\nWednesday, October 11, 2023\n\n\n\n\nMounting Your GU Domains Space as a Local Drive\n\n\nWednesday, October 11, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Use the menu on the left, or the table below, to browse the resources! You can use the listing of Categories on the right side of this page to filter the resources based on category.\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nIncluding Images in .qmd Files\n\n\nWednesday, October 11, 2023\n\n\n\n\nEstablishing Global Settings for R in VSCode\n\n\nMonday, October 16, 2023\n\n\n\n\nMounting Your GU Domains Space as a Local Drive\n\n\nWednesday, October 11, 2023\n\n\n\n\n\n\nNo matching items"
   }
 ]

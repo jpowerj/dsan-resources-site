@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/images-in-qmd.html",
+      "/rprofile-globals.html",
       "/mounting-gu-domains.html"
     ]
   }
